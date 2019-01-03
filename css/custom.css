@@ -548,6 +548,9 @@ input[type="button"].btn-block {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
   position: fixed;
   top: 0; }
+  .navbar-custom i {
+    color: #dc3545;
+  }
   .navbar-custom .navbar-brand {
     color: #0a0c0d;
     margin: 0;
@@ -764,11 +767,11 @@ section {
 
 #home .card-header {
   background-color: #2d343e;
-  color: #fff !important; }
+  color: #dc3545 !important; }
   #home .card-header a {
-    color: #fff !important; }
+    color: #dc3545 !important; }
     #home .card-header a:hover {
-      color: #e6e6e6; }
+      color: #dc3545 }
 
 #home .card-body {
   background-color: #f8f9fa;
