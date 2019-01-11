@@ -1,0 +1,126 @@
+// Variables
+// ----------
+
+// Color System
+$blue: #007bff;
+$light-blue: #5aa0c1;
+$dark-blue: #2d343e;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #a7212a;
+$light-red: #dc3545;
+$orange: #fd7e14;
+$cs-orange: #ff5800;
+$yellow: #ffca10;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$brown: #993300;
+$light-brown: #663333;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #f2f2f2;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #d1d1d1;
+$gray-600: #989898;
+$gray-700: #585858;
+$gray-800: #404242;
+$gray-900: #1a1a1a;
+$black: #000;
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+);
+
+$theme-colors: (
+  "primary": #dc3545
+);
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800
+);
+$theme-color-interval: 8%;
+// Body
+$body-bg: $white;
+$body-color: $gray-900;
+// Links
+$link-color: $blue;
+$link-decoration: none;
+$link-hover-color: darken($blue, 15%);
+$link-hover-decoration: underline;
+// standardized image names
+$banner: "../images/banner1.png";
+$logo: "../images/logo.png";
+$cs-logo: "../images/CSLogoWhite.png";
+// custom alert styles
+$alert-bg: $gray-200;
+$alert-color: $gray-900;
+$alert-border-color: $gray-900;
+// custom navbar styles
+$navbar-background-color: $white;
+$navbar-custom-color: $light-red;
+$navbar-custom-hover-color: darken($navbar-custom-color, 10%);
+$navbar-custom-active-color: darken($navbar-custom-color, 10%);
+$navbar-custom-disabled-color: lighten($navbar-custom-color, 10%);
+$navbar-custom-toggler-border-color: rgba($red, 0.1);
+$navbar-custom-height: 75px;
+// custom footer styles
+$footer-background-color: $dark-blue;
+$footer-text-color: $white;
+$footer-link-color: $cs-orange;
+// custom carousel styles
+$carousel-background: url($banner);
+$carousel-height: 450px;
+// custom jumbotron styles
+$jumbotron-background: url($banner);
+$jumbotron-height: 300px;
+// custom section styles
+$section-padding: 15px 0;
+// -- content
+$content-bg: $white;
+$content-color: $gray-900;
+// -- content2
+$content2-bg: $gray-100;
+$content2-color: $gray-900;
+// -- safety message
+$safety-message-bg: $white;
+$safety-message-color: $gray-900;
+$signature-color: $gray-700;
+// -- support accordian
+$support-border-color: $gray-900;
+$support-header-bg: $dark-blue;
+$support-bg: $gray-100;
+$support-link-color: $light-red;
+$support-color: $gray-900;
+$support-header-font-size: 1rem;
+$support-font-size: 0.75rem;
+// -- call to action
+$call-to-action-bg: $gray-700;
+$call-to-action-color: $gray-900;
+// catalog page
+$catalog-bg: #fff;
+$catalog-color: $gray-900;
+$catalog-header-bg: #e9ecef;
+$catalog-header-color: $catalog-color;
+$catalog-link-color: $catalog-color;

@@ -7,185 +7,286 @@
     <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css" />
 </head>
 
 <body id="home">
 
     <!--HEADER-->
-
     <header>
-
         <!--NAVBAR-->
-
-        <nav class="navbar navbar-expand-md fixed-top navbar-custom">
-            <div class="container">
-                <!-- Brand -->
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo.png" alt="logo" style="width:150px">
-                </a>
-                <!-- Toggler -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Nav Items -->
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <nav id="navbar1" class="navbar navbar-expand-md fixed-top navbar-custom navbar-light">
+                <div class="container">
+                  <!-- Brand -->
+                  <a class="navbar-brand">
+                    <img src="images/logo.png" alt="logo" />
+                  </a>
+                  <!-- Nav Items -->
+                  <div>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"> <i class="fa fa-home"></i> | Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./catalog/catalog.html"> <i class="fa fa-check-square"
-                                    aria-hidden="true"></i> | Course Catalog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> | Login</a>
-                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          <i class="fa fa-home"></i> | Home</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./catalog/catalog.html"> <i class="fa fa-check-square"
+                                aria-hidden="true"></i> | Course Catalog</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><i class="fa fa-user"></i> | Login</a
+                        >
+                      </li>
                     </ul>
+                  </div>
                 </div>
-            </div>
+        </nav>
+
+        <nav id="navbar2" class="navbar navbar-expand-md fixed-top navbar-custom navbar-light">
+                  <!-- Brand -->
+                  <a class="navbar-brand">
+                        <img src="images/logo.png" alt="logo" />
+                  </a>
+                  <!-- Toggler -->
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapsibleNavbar"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <!-- Nav Items -->
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          <i class="fa fa-home"></i> | Home</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./catalog/catalog.html"> <i class="fa fa-check-square"
+                                aria-hidden="true"></i> | Course Catalog</a>
+                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><i class="fa fa-user"></i> | Login</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
         </nav>
 
         <div class="alert alert-dismissible text-center">
             <button type="button" class="close" data-dismiss="alert">×</button>
             <strong>15% off all courses! Discount automatically applied at checkout.</strong>
         </div>
+
+        <!--CAROUSEL-->
+        <div id="carousel-custom" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-custom" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-custom" data-slide-to="1"></li>
+                <li data-target="#carousel-custom" data-slide-to="2"></li>
+                <li data-target="#carousel-custom" data-slide-to="3"></li>
+                <li data-target="#carousel-custom" data-slide-to="4"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <div class="mask"></div>
+                        <picture>
+                            <source srcset="./images/banner1/banner1-xl.jpg" media="(min-width: 1400px)">
+                            <source srcset="./images/banner1/banner1-l.jpg" media="(min-width: 769px)">
+                            <source srcset="./images/banner1/banner1-m.jpg" media="(min-width: 577px)">
+                            <img srcset="./images/banner1/banner1-s.jpg" alt="slide 1" class="d-block img-fluid">
+                        </picture>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Osha 10 Hour Construction</h3>
+                        <p>ClickSafety’s OSHA 10-Hour Construction is a part of an online OSHA outreach program that
+                            results in a valid DOL/OSHA 10-Hour Card. This OSHA10 online training course teaches
+                            recognition, avoidance, abatement and prevention of safety and health hazards in workplaces.
+                            This course also provides information regarding workers’ rights, employer responsibilities and
+                            how to file a complaint. It was also designed to help workers stay up-to-date with their OSHA
+                            safety requirements.</p>
+                        <button class="btn btn-primary">Buy Now | $89</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <div class="mask"></div>
+                        <picture>
+                            <source srcset="./images/banner2/banner2-xl.jpg" media="(min-width: 1400px)">
+                            <source srcset="./images/banner2/banner2-l.jpg" media="(min-width: 769px)">
+                            <source srcset="./images/banner2/banner2-m.jpg" media="(min-width: 577px)">
+                            <img srcset="./images/banner2/banner2-s.jpg" alt="slide 2" class="d-block img-fluid">
+                        </picture>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Osha 30 Hour Construction</h3>
+                        <p>ClickSafety's OSHA 30-Hour Construction is an OSHA-Authorized online course featuring the
+                            required steps for completing OSHA Outreach training. This online training covers everything
+                            from Electrical Hazard Safety to Fall Protection. Our OSHA 30-Hour Construction online course
+                            is a proven way to receive a valid OSHA 30-Hour Card and achieve the safety level required by
+                            your company for work in the construction industry. ClickSafety is one of the most trusted
+                            names in online safety training and we're here specifically to help you learn the essential
+                            skills you need to perform your work safely.</p>
+                        <button class="btn btn-primary">Buy Now | $139</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <div class="mask"></div>
+                        <picture>
+                            <source srcset="./images/banner3/banner3-xl.jpg" media="(min-width: 1400px)">
+                            <source srcset="./images/banner3/banner3-l.jpg" media="(min-width: 769px)">
+                            <source srcset="./images/banner3/banner3-m.jpg" media="(min-width: 577px)">
+                            <img srcset="./images/banner3/banner3-s.jpg" alt="slide 3" class="d-block img-fluid">
+                        </picture>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">OSHA 30 Hour Voice Authentication (Note this is for NY)</h3>
+                        <p>REQUIRED FOR NEW YORK CITY - VA courses were developed in conjunction with NYCDOB to address
+                            LL196 online course proctoring requirements. The voice authenticated OSHA courses represent a
+                            best practice to ensure the identity of the student throughout the course.</p>
+                        <button class="btn btn-primary">Buy Now | $ 189</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <div class="mask"></div>
+                        <picture>
+                            <source srcset="./images/banner4/banner4-xl.jpg" media="(min-width: 1400px)">
+                            <source srcset="./images/banner4/banner4-l.jpg" media="(min-width: 769px)">
+                            <source srcset="./images/banner4/banner4-m.jpg" media="(min-width: 577px)">
+                            <img srcset="./images/banner4/banner4-s.jpg" alt="slide 4" class="d-block img-fluid">
+                        </picture>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Cal OSHA 10 Hour Construction</h3>
+                        <p>The California OSHA 10-Hour Construction online safety course is specially designed to help keep
+                            California workers safe while obtaining their OSHA 10-Hour Card. This online training course
+                            teaches recognition, avoidance, abatement and prevention of safety and health hazards in
+                            workplaces. This program also provides information regarding workers’ rights, employer
+                            responsibilities and how to file a complaint. It was also designed to help individuals stay
+                            up-to-date with their OSHA safety requirements.</p>
+                        <button class="btn btn-primary">Buy Now | $89</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+    
+                        <div class="mask"></div>
+                        <picture>
+                            <source srcset="./images/banner5/banner5-xl.jpg" media="(min-width: 1400px)">
+                            <source srcset="./images/banner5/banner5-l.jpg" media="(min-width: 769px)">
+                            <source srcset="./images/banner5/banner5-m.jpg" media="(min-width: 577px)">
+                            <img srcset="./images/banner5/banner5-s.jpg" alt="slide 5" class="d-block img-fluid">
+                        </picture>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">OSHA 10 Hour Espanol</h3>
+                        <p>ClickSafety está actualizado OSHA 10 horas Construcción forma parte de un programa en línea OSHA
+                            alcance que resulte en una válida DOL / OSHA 10-Hour Card. Este curso de formación en línea
+                            enseña a reconocer, evitar, la reducción y prevención de los riesgos para la seguridad y salud
+                            en los lugares de trabajo. Este programa también proporciona información sobre los derechos de
+                            los trabajadores, las responsabilidades del empleador y cómo presentar una queja. También fue
+                            diseñado para ayudar a las personas mantenerse al día con las exigencias de seguridad de OSHA.</p>
+                        <button class="btn btn-primary">Comprar | $89</button>
+                    </div>
+                </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-custom" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+        </div>
     </header>
 
-    <!--CAROUSEL-->
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-2" data-slide-to="1"></li>
-            <li data-target="#carousel-example-2" data-slide-to="2"></li>
-            <li data-target="#carousel-example-2" data-slide-to="3"></li>
-            <li data-target="#carousel-example-2" data-slide-to="4"></li>
-        </ol>
-        <!--/.Indicators-->
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <div class="view">
-                    <div class="mask">
-                        <img class="d-block w-100" src="./images/banner6.jpg" alt="First slide">
+    <!--MAIN SECTION-->
+    <main>
+    <!--Content-->
+    <!-- <section class="pt-md-5 pb-md-5" id="content2">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            For more than a decade, CNAʼs SORCE® On Demand has provided our policyholders and agent partners with online educational solutions that help reduce exposures, improve productivity and help to protect the bottom line.  SORCE® On Demand provides instant access to CNAʼs library of risk control resources 24/7, offering learning to you and your employees.
+                        </p>
+                        <p>
+                            CNA Risk Control is committed to creating value for policyholders through sharing of knowledge, latest research, emerging trends and industry best practices.  CNA’s partnership with ClickSafety reinforces the unwavering commitment to provide policyholders with the resources to mitigate and manage risk.
+                        </p>
+                        <p><span class="lead"><em>Steve Hernandez</em></span>, SVP, Risk Control</p>
                     </div>
                 </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">Osha 10 Hour Construction</h3>
-                    <p>ClickSafety’s OSHA 10-Hour Construction is a part of an online OSHA outreach program that
-                        results in a valid DOL/OSHA 10-Hour Card. This OSHA10 online training course teaches
-                        recognition, avoidance, abatement and prevention of safety and health hazards in workplaces.
-                        This course also provides information regarding workers’ rights, employer responsibilities and
-                        how to file a complaint. It was also designed to help workers stay up-to-date with their OSHA
-                        safety requirements.</p>
-                    <button class="btn btn-primary">Buy Now | $89</button>
-                </div>
             </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
-                    <div class="mask">
-                        <img class="d-block w-100" src="./images/banner7.jpg" alt="Second slide">
-                    </div>
-                </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">Osha 30 Hour Construction</h3>
-                    <p>ClickSafety's OSHA 30-Hour Construction is an OSHA-Authorized online course featuring the
-                        required steps for completing OSHA Outreach training. This online training covers everything
-                        from Electrical Hazard Safety to Fall Protection. Our OSHA 30-Hour Construction online course
-                        is a proven way to receive a valid OSHA 30-Hour Card and achieve the safety level required by
-                        your company for work in the construction industry. ClickSafety is one of the most trusted
-                        names in online safety training and we're here specifically to help you learn the essential
-                        skills you need to perform your work safely.</p>
-                    <button class="btn btn-primary">Buy Now | $139</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
-                    <div class="mask">
-                        <img class="d-block w-100" src="./images/banner8.jpg" alt="Third slide">
-                    </div>
-                </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">OSHA 30 Hour Voice Authentication (Note this is for NY)</h3>
-                    <p>REQUIRED FOR NEW YORK CITY - VA courses were developed in conjunction with NYCDOB to address
-                        LL196 online course proctoring requirements. The voice authenticated OSHA courses represent a
-                        best practice to ensure the identity of the student throughout the course.</p>
-                    <button class="btn btn-primary">Buy Now | $ 189</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
-                    <div class="mask">
-                        <img class="d-block w-100" src="./images/banner9.jpg" alt="Fourth slide">
-                    </div>
-                </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">Cal OSHA 10 Hour Construction</h3>
-                    <p>The California OSHA 10-Hour Construction online safety course is specially designed to help keep
-                        California workers safe while obtaining their OSHA 10-Hour Card. This online training course
-                        teaches recognition, avoidance, abatement and prevention of safety and health hazards in
-                        workplaces. This program also provides information regarding workers’ rights, employer
-                        responsibilities and how to file a complaint. It was also designed to help individuals stay
-                        up-to-date with their OSHA safety requirements.</p>
-                    <button class="btn btn-primary">Buy Now | $89</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!--Mask color-->
-                <div class="view">
+        </section> -->
 
-                    <div class="mask">
-                        <img class="d-block w-100" src="./images/banner5.jpeg" alt="Fifth slide">
+    <!--Columns-->
+    <!-- <section class="text-center pt-md-5 pb-md-5" id="columns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 mb-5 d-flex flex-column justify-content-between text-left">
+                        <div class="columns-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h2>Safety Orientation & Registration</h2>
+                            <p>Start your online training. You will be prompted to sign in or register for an account. Training sessions vary in length, typically 30-60 minutes to complete including registration. Credit card is required.</p>
+                        </div>
+                        <a href="#" class="cna-primary-button-lg align-self-start">Start</a>
+                    </div>
+                    <div class="col-lg-3 mb-5 d-flex flex-column justify-content-between text-left">
+                        <div class="columns-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h2>OSHA 10 & 30 Hour Training</h2>
+                                <p>Purchase OSHA certified online courses. Register to set up an account or sign in and purchase course units, you will then be able to add users and assign courses. Credit card is required.</p>
+                        </div>
+                        <a href="https://cdn2.hubspot.net/hubfs/2535496/Course%20Catalog%20110218.pdf" class="cna-primary-button-lg align-self-start">Osha Courses</a>
+                    </div>
+                    <div class="col-lg-3 mb-5 d-flex flex-column justify-content-between text-left">
+                        <div class="columns-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h2 class="text-left">Risk Management Short Learning Sessions</h2>
+                                <p class="text-left">For our valued customers CNA offers learning mini modules.</p>
+                                <p class="lead">
+                                        <em>FEATURING:</em>
+                                        Driving in Today's World
+                                </p>
+                        </div>
+                        <a href="#" class="cna-primary-button-lg align-self-start">Register Now</a>
+                    </div>
+                    <div class="col-lg-3 mb-5 d-flex flex-column justify-content-between text-left">
+                        <div class="columns-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h2>Resources</h2>
+                                <p>CNA offers a way for you to ask questions to our Risk Control Team. Learn more about our PrepWise campaign and other CNA bulletins and presentations.</p>
+                        </div>
+                        <a href="https://www.cna.com/web/guest/cna/mngrsk/?name=SA-RCDocuments" class="cna-primary-button-lg align-self-start">View Resources</a>
                     </div>
                 </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">OSHA 10 Hour Espanol</h3>
-                    <p>ClickSafety está actualizado OSHA 10 horas Construcción forma parte de un programa en línea OSHA
-                        alcance que resulte en una válida DOL / OSHA 10-Hour Card. Este curso de formación en línea
-                        enseña a reconocer, evitar, la reducción y prevención de los riesgos para la seguridad y salud
-                        en los lugares de trabajo. Este programa también proporciona información sobre los derechos de
-                        los trabajadores, las responsabilidades del empleador y cómo presentar una queja. También fue
-                        diseñado para ayudar a las personas mantenerse al día con las exigencias de seguridad de OSHA.</p>
-                    <button class="btn btn-primary">Comprar | $89</button>
-                </div>
             </div>
-        </div>
-        <!--/.Slides-->
-        <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!--/.Controls-->
-    </div>
-    <!--/.Carousel Wrapper-->
-
-    <!-- Jumbotron for mobile -->
-
-    <div class="jumbotron jumbotron-fluid  d-flex justify-content-center align-items-end" style="background-image:url('./images/banner2.jpeg')">
-        <div class="view">
-            <div class="mask"></div>
-        </div>
-        <div class="container justify-content-center text-center">
-            <h3>Course Catalog</h3>
-            <p>Select all the safety courses you need.</p>
-            <button class="btn btn-primary">View Course Catalog</button>
-        </div>
-    </div>
-
-    <!--CONTENT-->
+    </section> -->
     <section class="container" id="content">
         <div class="row">
 
@@ -254,13 +355,15 @@
 
     </div>
 
+    </main>
 
+    <!--FOOTER-->
     <div class="footer-custom">
         <footer class="mt-md-4">
 
             <nav class="navbar navbar-expand-md">
                 <div class="container">
-                    <a class="navbar-brand" href="https://www.clicksafety.com/"><img src="./images/CSLogoWhite.png" alt="ClickSafety Logo"
+                    <a href="https://www.clicksafety.com/"><img src="./images/CSLogoWhite.png" alt="ClickSafety Logo"
                             width="150"></a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a href="#" class="nav-link" title="Privacy Policy">Privacy Policy</a></li>
@@ -278,7 +381,8 @@
                         <small class="mt-0 text-muted">
                             The information contained in this online training website is provided by ClickSafety. While
                             every effort is made to keep the content up to date and accurate, ASCC makes no
-                            representations or warranties about the information contained on the website. ASCC
+                            representations or warranties about the information contained on the website.
+                            ASCC
                             shall not be responsible for losses or damages from the use of, or the availability or
                             unavailability of this website.
                         </small>
@@ -290,19 +394,15 @@
         </footer>
     </div>
 
-
     <!--scripts loaded here-->
-
-
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <!-- <script>
-        $('.collapse').on('hidden.bs.collapse', function () {
-            $('.collapse').eq(0).collapse('show');
-        })
-    </script> -->
-
 </body>
 
 </html>

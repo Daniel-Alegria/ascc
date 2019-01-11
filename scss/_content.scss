@@ -1,0 +1,38 @@
+#home {
+  #content {
+    // background: url(../images/safetymessage.jpg);
+    background-color: $body-bg;
+    color: $content-color;
+  }
+  // safety message
+  #safety-message {
+    background-color: $safety-message-bg;
+    color: $safety-message-color;
+    .blockquote-footer {
+      color: lighten($safety-message-color, 10%) !important;
+    }
+  }
+  // support accordian
+  .card {
+    border-color: $support-border-color !important;
+  }
+  .card-header {
+    background-color: $support-header-bg;
+    color: $light-red;
+    a {
+      color: $light-red !important;
+      &:hover {
+        color: darken($light-red, 10%);
+      }
+    }
+  }
+  .card-body {
+    background-color: $support-bg;
+    color: $support-color;
+    font-size: 0.75rem;
+    a {
+      color: $support-link-color !important;
+      opacity: 1 !important;
+    }
+  }
+}
