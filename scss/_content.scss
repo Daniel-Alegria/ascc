@@ -18,11 +18,11 @@
   }
   .card-header {
     background-color: $support-header-bg;
-    color: $light-red;
+    color: $gray-200;
     a {
-      color: $light-red !important;
+      color: $gray-200 !important;
       &:hover {
-        color: darken($light-red, 10%);
+        color: darken($gray-200, 10%);
       }
     }
   }
