@@ -5,8 +5,9 @@
   border: $alert-border-color;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
   border-radius: 0px; // margin: 54px 0 0 0;
-  position: absolute;
+  // position: absolute;
   margin-top: $navbar-custom-height;
+  margin-bottom: 0px;
   z-index: 999;
   width: 100%;
 }

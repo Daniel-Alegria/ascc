@@ -84,7 +84,7 @@ $navbar-custom-color: $light-red;
 $navbar-custom-hover-color: darken($navbar-custom-color, 10%);
 $navbar-custom-active-color: darken($navbar-custom-color, 10%);
 $navbar-custom-disabled-color: lighten($navbar-custom-color, 10%);
-$navbar-custom-toggler-border-color: rgba($red, 0.1);
+$navbar-custom-toggler-border-color: rgba($red, 1);
 $navbar-custom-height: 60px;
 // custom footer styles
 $footer-background-color: $dark-blue;
